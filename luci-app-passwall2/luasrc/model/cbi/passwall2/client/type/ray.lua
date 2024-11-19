@@ -263,7 +263,7 @@ o:depends({ [option_name("protocol")] = "_shunt" })
 
 -- [[ 分流模块 End ]]
 
-o = s:option(Value, option_name("address"), translate("Address (Support Domain Name)"))
+o = s:option(Value, option_name("address"), translate("ipv4地址(不支持域名)"))
 
 o = s:option(Value, option_name("port"), translate("Port"))
 o.datatype = "port"
