@@ -71,6 +71,10 @@ local global_cfgid = uci:get_all(appname, "@global[0]")[".name"]
 s = m:section(TypedSection, "global")
 s.anonymous = true
 s.addremove = false
+s:tab("faq", "注意事项必看")
+
+o = s:taboption("faq", DummyValue, "")
+o.template = appname .. "/global/faq"
 
 s:tab("Main", translate("Main"))
 
@@ -351,12 +355,12 @@ loglevel:value("debug")
 loglevel:value("info")
 loglevel:value("warning")
 loglevel:value("error")
-
-s:tab("faq", "FAQ")
+--[[
+s:tab("faq", "注意事项必看")
 
 o = s:taboption("faq", DummyValue, "")
 o.template = appname .. "/global/faq"
-
+--]]
 -- [[ Socks Server ]]--
 o = s:taboption("Main", Flag, "socks_enabled", "Socks " .. translate("Main switch"))
 o.rmempty = false
