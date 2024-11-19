@@ -31,19 +31,16 @@ local api = require "luci.passwall2.api"
 <div class="cbi-section cbi-tblsection dns-con">
 	<div id="faq_dns">
 		<ul>
-            <b class="faq-title"><%:DNS related issues:%></b>
-			<li class="dns-item">1. <span><%:Certain browsers such as Chrome have built-in DNS service, which may affect DNS resolution settings. You can go to 'Settings -> Privacy and security -> Use secure DNS' menu to turn it off.%></span></li>
-			<li class="dns-item">2. <span><%:If you are unable to access the internet after reboot, please try clearing the cache of your terminal devices (make sure to close all open browser application windows first, this step is especially important):%></span>
-			    <ul><li class="dns-list"> ◦ <span><%:For Windows systems, open Command Prompt and run the command 'ipconfig /flushdns'.%></span></li>
-			        <li class="dns-list"> ◦ <span><%:For Mac systems, open Terminal and run the command 'sudo killall -HUP mDNSResponder'.%></span></li>
-			        <li class="dns-list"> ◦ <span><%:For mobile devices, you can clear it by reconnecting to the network, such as toggling Airplane Mode and reconnecting to WiFi.%></span></li>
-			    </ul>
-			</li>
-			<li class="dns-item">3. <span><%:Please make sure your device's network settings point both the DNS server and default gateway to this router, to ensure DNS queries are properly routed.%></span></li>
+            <b class="faq-title"><%:注意事项:%></b>
+			<li class="dns-item">1. <span><%:不要乱动，先看看使用说明再进行使用。%></span></li>
+			<li class="dns-item">2. <span><%:尽可能不要改备注会找不到对应的wifi。%></span></li>
+			<li class="dns-item">3. <span><%:格式需要去掉域名修改正确格式使用。%></span></li>
+			<li class="dns-item">4. <span><%:如隔一段时间出现超时一般是网线问题，确保格式正确的情况下，进入网络接口，点击LAN后面的连接按钮即可解决。（建议更换网线）%></span></li>
+			<li class="dns-item">5. <span><%:如出现延时但无网络，点击系统里的系统同步浏览器时间即可。%></span></li>
 		</ul>
 	</div>
-	<div id="faq_reset"></div>
 </div>
+
 
 <script>
 	var origin = window.location.origin;
