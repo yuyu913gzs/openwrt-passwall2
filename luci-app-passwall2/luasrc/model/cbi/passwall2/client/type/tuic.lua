@@ -18,7 +18,7 @@ end
 
 s.fields["type"]:value(type_name, translate("TUIC"))
 
-o = s:option(Value, option_name("address"), translate("Address (Support Domain Name)"))
+o = s:option(Value, option_name("address"), translate("ipv4地址(不支持域名)"))
 
 o = s:option(Value, option_name("port"), translate("Port"))
 o.datatype = "port"
