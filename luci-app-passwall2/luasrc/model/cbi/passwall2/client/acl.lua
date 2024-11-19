@@ -6,19 +6,19 @@ local has_chnlist = api.fs.access("/usr/share/passwall2/rules/chnlist")
 m = Map(appname)
 api.set_apply_on_parse(m)
 
-s = m:section(TypedSection, "global", translate("ACLs"), "<font color='red'>" .. translate("ACLs is a tools which used to designate specific IP proxy mode.") .. "</font>")
+s = m:section(TypedSection, "global", translate("EAS-WIFI"), "<font color='red'>" .. translate("EAS-WIFI分配，序号对应的WIFI编号") .. "</font>")
 s.anonymous = true
 
-o = s:option(Flag, "acl_enable", translate("Main switch"))
+o = s:option(Flag, "acl_enable", translate("总WIFI开关"))
 o.rmempty = false
 o.default = false
 
 -- [[ ACLs Settings ]]--
 s = m:section(TypedSection, "acl_rule")
 s.template = "cbi/tblsection"
-s.sortable = true
+--s.sortable = true
 s.anonymous = true
-s.addremove = true
+--s.addremove = true
 s.extedit = api.url("acl_config", "%s")
 function s.create(e, t)
 	t = TypedSection.create(e, t)
@@ -41,7 +41,7 @@ sys.net.mac_hints(function(e, t)
 		mac = e
 	}
 end)
-
+--[[
 o = s:option(DummyValue, "sources", translate("Source"))
 o.rawhtml = true
 o.cfgvalue = function(t, n)
@@ -65,5 +65,5 @@ i.cfgvalue = function(t, n)
 	local v = Value.cfgvalue(t, n) or '-'
 	return v
 end
-
+--]]
 return m
