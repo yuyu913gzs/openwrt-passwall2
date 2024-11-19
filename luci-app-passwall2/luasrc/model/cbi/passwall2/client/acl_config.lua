@@ -105,7 +105,7 @@ for k, name in ipairs(device_list) do
 end
 
 interface:depends({ use_interface = 1 })
-
+--[[
 ---- Source
 sources = s:option(DynamicList, "sources", translate("Source"))
 sources.description = "<ul><li>" .. translate("Example:")
@@ -173,7 +173,7 @@ sources.validate = function(self, value, t)
 	return value
 end
 sources.write = dynamicList_write
-
+--]]
 ---- TCP No Redir Ports
 local TCP_NO_REDIR_PORTS = uci:get(appname, "@global_forwarding[0]", "tcp_no_redir_ports")
 o = s:option(Value, "tcp_no_redir_ports", translate("TCP No Redir Ports"))
