@@ -42,7 +42,7 @@ test_url() {
 
 test_proxy() {
 	result=0
-	status=$(test_url "https://www.google.com/generate_204" ${retry_num} ${connect_timeout})
+	status=$(test_url "https://www.tiktok.com" ${retry_num} ${connect_timeout})
 	if [ "$status" = "200" ]; then
 		result=0
 	else
