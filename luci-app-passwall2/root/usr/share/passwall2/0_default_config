@@ -64,6 +64,11 @@ config global_subscribe
 	list filter_discard_list '剩余流量'
 	list filter_discard_list 'QQ群'
 	list filter_discard_list '官网'
+	option ss_type 'xray'
+	option trojan_type 'sing-box'
+	option vmess_type 'xray'
+	option vless_type 'xray'
+	option hysteria2_type 'sing-box'
 
 config global_singbox
 	option geoip_path '/usr/share/singbox/geoip.db'
@@ -233,3 +238,4 @@ config nodes 'Qrapwiau'
 	option tcp_guise 'none'
 	option tcpMptcp '0'
 	option tcpNoDelay '0'
+
